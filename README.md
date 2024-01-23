@@ -16,7 +16,9 @@ Before annotating the images, you may use [convert_color.py](convert_color.py) t
 [train.py](train.py) provides no Trainer version for fine-tuning the Hugging Face model with image augmentations to further improve model performance.  
 
 ## Model Training
-Please use [train.py](train.py) to train the model, modify the below arguments before training
+This repo is using 5 classes segmentation as an example, please modify color_map() function for mask visualization if changing the number of classes.  
+Please refer to [example dataset](https://huggingface.co/datasets/issacchan26/gray_bullet) to view the format of id2label.json
+Modify the below arguments in [train.py](train.py) before training
 ```
 args = Params(
         hf_dataset_identifier = "issacchan26/gray_bullet",  # path to hugging face dataset
